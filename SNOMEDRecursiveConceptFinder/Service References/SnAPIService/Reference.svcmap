@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0a728d05-5fd2-4efb-bc21-0a929b42057b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://snapi.dataline.co.uk/SnAPIService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SnApiService.xsd" MetadataType="Schema" ID="5bf33a4e-a964-4ded-a9ed-e4599889cefb" SourceId="1" SourceUrl="http://snapi.dataline.co.uk/SnApiService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SnApiService1.xsd" MetadataType="Schema" ID="75d71383-de15-4526-af1e-a9cabf58fd35" SourceId="1" SourceUrl="http://snapi.dataline.co.uk/SnApiService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SnApiService2.xsd" MetadataType="Schema" ID="b2333d19-53a2-4420-aa8c-26a46c8cf1b6" SourceId="1" SourceUrl="http://snapi.dataline.co.uk/SnApiService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SnApiService3.xsd" MetadataType="Schema" ID="40da6a49-5966-4011-be6d-4a9ec949a7b6" SourceId="1" SourceUrl="http://snapi.dataline.co.uk/SnApiService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SnApiService.disco" MetadataType="Disco" ID="53fc4c9a-6611-4086-9910-c22c0299ed04" SourceId="1" SourceUrl="http://snapi.dataline.co.uk/SnApiService.svc?disco" />
+    <MetadataFile FileName="SnApiService.wsdl" MetadataType="Wsdl" ID="f6e61a47-5781-482c-be08-663e3d1c4069" SourceId="1" SourceUrl="http://snapi.dataline.co.uk/SnApiService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

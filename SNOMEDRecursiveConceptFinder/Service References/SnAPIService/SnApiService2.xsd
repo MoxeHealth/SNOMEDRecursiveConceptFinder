@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SnApiWcfService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SnApiWcfService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://snapi.dataline.co.uk/SnApiService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="ArrayOfNeighbourCountResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NeighbourCountResult" nillable="true" type="tns:NeighbourCountResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNeighbourCountResult" nillable="true" type="tns:ArrayOfNeighbourCountResult" />
+  <xs:complexType name="NeighbourCountResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConceptFullySpecifiedName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConceptId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="NeighbourCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PorCH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelType" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="RelTypeFullySpecifiedName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NeighbourCountResult" nillable="true" type="tns:NeighbourCountResult" />
+  <xs:complexType name="ArrayOfRelType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RelType" nillable="true" type="tns:RelType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRelType" nillable="true" type="tns:ArrayOfRelType" />
+  <xs:complexType name="RelType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Frequency" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FullySpecifiedName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelationshipType" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RelType" nillable="true" type="tns:RelType" />
+  <xs:complexType name="ArrayOfMapSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MapSet" nillable="true" type="tns:MapSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMapSet" nillable="true" type="tns:ArrayOfMapSet" />
+  <xs:complexType name="MapSet">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MapSetId" type="xs:long" />
+          <xs:element minOccurs="0" name="MapSetName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MapSetRealmId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MapSetRuleType" nillable="true" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="MapSetSchemeId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MapSetSchemeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MapSetSchemeVersion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MapSetSeparator" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MapSetType" nillable="true" type="xs:unsignedByte" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MapSet" nillable="true" type="tns:MapSet" />
+  <xs:complexType name="ArrayOfStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Status" nillable="true" type="tns:Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatus" nillable="true" type="tns:ArrayOfStatus" />
+  <xs:complexType name="Status">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConceptStatus" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="StatusName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Status" nillable="true" type="tns:Status" />
+  <xs:complexType name="ArrayOfSuffix">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Suffix" nillable="true" type="tns:Suffix" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSuffix" nillable="true" type="tns:ArrayOfSuffix" />
+  <xs:complexType name="Suffix">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Frequency" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="suffix" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Suffix" nillable="true" type="tns:Suffix" />
+  <xs:complexType name="ArrayOfFavourite">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Favourite" nillable="true" type="tns:Favourite" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFavourite" nillable="true" type="tns:ArrayOfFavourite" />
+  <xs:complexType name="Favourite">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FavouriteId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="FavouriteName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MemberCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PrivateSharedFlag" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Favourite" nillable="true" type="tns:Favourite" />
+  <xs:complexType name="ArrayOfSubSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubSet" nillable="true" type="tns:SubSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSubSet" nillable="true" type="tns:ArrayOfSubSet" />
+  <xs:complexType name="SubSet">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MemberCount" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SubSetId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SubSetType" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SubSetname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SubSet" nillable="true" type="tns:SubSet" />
+  <xs:complexType name="ArrayOfConcept">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Concept" nillable="true" type="tns:Concept" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConcept" nillable="true" type="tns:ArrayOfConcept" />
+  <xs:complexType name="Concept">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CTV3ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConceptId" type="xs:long" />
+          <xs:element minOccurs="0" name="ConceptStatus" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="FullySpecifiedName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsPrimitive" nillable="true" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="LenStr" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RootConceptId" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="SNOMEDID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="r" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="weight" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Concept" nillable="true" type="tns:Concept" />
+  <xs:complexType name="ArrayOfICD10Code">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICD10Code" nillable="true" type="tns:ICD10Code" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICD10Code" nillable="true" type="tns:ArrayOfICD10Code" />
+  <xs:complexType name="ICD10Code">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q9:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LenStr" type="xs:int" />
+          <xs:element minOccurs="0" name="r" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="weight" nillable="true" type="xs:decimal" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ICD10Code" nillable="true" type="tns:ICD10Code" />
+  <xs:complexType name="ArrayOfDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Description" nillable="true" type="tns:Description" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDescription" nillable="true" type="tns:ArrayOfDescription" />
+  <xs:complexType name="Description">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q10:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConceptId" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionId" type="xs:long" />
+          <xs:element minOccurs="0" name="DescriptionStatus" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="DescriptionType" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="IbitialCapitalStatus" nillable="true" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="LanguageCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Term" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Description" nillable="true" type="tns:Description" />
+  <xs:complexType name="ArrayOfICD10Description">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICD10Description" nillable="true" type="tns:ICD10Description" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICD10Description" nillable="true" type="tns:ArrayOfICD10Description" />
+  <xs:complexType name="ICD10Description">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q11:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ALT_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TREE_DESCRIPTION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ICD10Description" nillable="true" type="tns:ICD10Description" />
+  <xs:complexType name="ArrayOfNeighbour">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Neighbour" nillable="true" type="tns:Neighbour" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNeighbour" nillable="true" type="tns:ArrayOfNeighbour" />
+  <xs:complexType name="Neighbour">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q12:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NameSpaceID" nillable="true" type="xs:long" />
+          <xs:element minOccurs="0" name="NeighbourConceptId" type="xs:long" />
+          <xs:element minOccurs="0" name="NeighbourFSN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PorCHorS" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Neighbour" nillable="true" type="tns:Neighbour" />
+  <xs:complexType name="ArrayOfICD10Children">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ICD10Children" nillable="true" type="tns:ICD10Children" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfICD10Children" nillable="true" type="tns:ArrayOfICD10Children" />
+  <xs:complexType name="ICD10Children">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q13:ComplexObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ALT_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RELATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TREE_DESCRIPTION" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ICD10Children" nillable="true" type="tns:ICD10Children" />
+</xs:schema>

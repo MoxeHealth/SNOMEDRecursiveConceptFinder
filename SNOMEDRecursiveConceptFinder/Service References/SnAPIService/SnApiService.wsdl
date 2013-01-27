@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SnApiService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://snapi.dataline.co.uk/SnApiService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://snapi.dataline.co.uk/SnApiService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://snapi.dataline.co.uk/SnApiService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SnApiWcfService" />
+      <xsd:import schemaLocation="http://snapi.dataline.co.uk/SnApiService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISnApiService_CreateFavourite_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFavourite" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_CreateFavourite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFavouriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_SetFavouritePrivateSharedFlag_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetFavouritePrivateSharedFlag" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_SetFavouritePrivateSharedFlag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetFavouritePrivateSharedFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_DeleteFavourite_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavourite" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_DeleteFavourite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavouriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_RenameFavourite_InputMessage">
+    <wsdl:part name="parameters" element="tns:RenameFavourite" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_RenameFavourite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RenameFavouriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_RegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_RegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_UnregisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnregisterUser" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_UnregisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnregisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetNeighbourCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNeighbourCount" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetNeighbourCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNeighbourCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetRelTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelTypes" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetRelTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetCrossMapSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrossMapSet" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetCrossMapSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCrossMapSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatus" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetSuffixes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuffixes" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetSuffixes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSuffixesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetFavourites_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavourites" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetFavourites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavouritesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetSubSets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubSets" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetSubSets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubSetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_SearchConcepts_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchConcepts" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_SearchConcepts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchConceptsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_SearchICD10Codes_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchICD10Codes" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_SearchICD10Codes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchICD10CodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_SearchConceptsCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchConceptsCount" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_SearchConceptsCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchConceptsCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetConcept_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConcept" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetConcept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConceptResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDescription" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetICD10Description_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetICD10Description" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetICD10Description_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetICD10DescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetNeighbours_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNeighbours" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetNeighbours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNeighboursResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetICD10Children_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetICD10Children" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetICD10Children_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetICD10ChildrenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_ManageFavourites_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManageFavourites" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_ManageFavourites_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManageFavouritesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_SetConfigValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetConfigValue" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_SetConfigValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetConfigValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetSnoflakeURL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSnoflakeURL" />
+  </wsdl:message>
+  <wsdl:message name="ISnApiService_GetSnoflakeURL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSnoflakeURLResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISnApiService">
+    <wsdl:operation name="CreateFavourite">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/CreateFavourite" message="tns:ISnApiService_CreateFavourite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/CreateFavouriteResponse" message="tns:ISnApiService_CreateFavourite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFavouritePrivateSharedFlag">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/SetFavouritePrivateSharedFlag" message="tns:ISnApiService_SetFavouritePrivateSharedFlag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/SetFavouritePrivateSharedFlagResponse" message="tns:ISnApiService_SetFavouritePrivateSharedFlag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavourite">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/DeleteFavourite" message="tns:ISnApiService_DeleteFavourite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/DeleteFavouriteResponse" message="tns:ISnApiService_DeleteFavourite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameFavourite">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/RenameFavourite" message="tns:ISnApiService_RenameFavourite_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/RenameFavouriteResponse" message="tns:ISnApiService_RenameFavourite_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/RegisterUser" message="tns:ISnApiService_RegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/RegisterUserResponse" message="tns:ISnApiService_RegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnregisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/UnregisterUser" message="tns:ISnApiService_UnregisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/UnregisterUserResponse" message="tns:ISnApiService_UnregisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNeighbourCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetNeighbourCount" message="tns:ISnApiService_GetNeighbourCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetNeighbourCountResponse" message="tns:ISnApiService_GetNeighbourCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRelTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetRelTypes" message="tns:ISnApiService_GetRelTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetRelTypesResponse" message="tns:ISnApiService_GetRelTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCrossMapSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetCrossMapSet" message="tns:ISnApiService_GetCrossMapSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetCrossMapSetResponse" message="tns:ISnApiService_GetCrossMapSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetStatus" message="tns:ISnApiService_GetStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetStatusResponse" message="tns:ISnApiService_GetStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSuffixes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetSuffixes" message="tns:ISnApiService_GetSuffixes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetSuffixesResponse" message="tns:ISnApiService_GetSuffixes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavourites">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetFavourites" message="tns:ISnApiService_GetFavourites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetFavouritesResponse" message="tns:ISnApiService_GetFavourites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubSets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetSubSets" message="tns:ISnApiService_GetSubSets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetSubSetsResponse" message="tns:ISnApiService_GetSubSets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchConcepts">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/SearchConcepts" message="tns:ISnApiService_SearchConcepts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/SearchConceptsResponse" message="tns:ISnApiService_SearchConcepts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchICD10Codes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/SearchICD10Codes" message="tns:ISnApiService_SearchICD10Codes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/SearchICD10CodesResponse" message="tns:ISnApiService_SearchICD10Codes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchConceptsCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/SearchConceptsCount" message="tns:ISnApiService_SearchConceptsCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/SearchConceptsCountResponse" message="tns:ISnApiService_SearchConceptsCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConcept">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetConcept" message="tns:ISnApiService_GetConcept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetConceptResponse" message="tns:ISnApiService_GetConcept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetDescription" message="tns:ISnApiService_GetDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetDescriptionResponse" message="tns:ISnApiService_GetDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetICD10Description">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetICD10Description" message="tns:ISnApiService_GetICD10Description_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetICD10DescriptionResponse" message="tns:ISnApiService_GetICD10Description_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNeighbours">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetNeighbours" message="tns:ISnApiService_GetNeighbours_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetNeighboursResponse" message="tns:ISnApiService_GetNeighbours_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetICD10Children">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetICD10Children" message="tns:ISnApiService_GetICD10Children_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetICD10ChildrenResponse" message="tns:ISnApiService_GetICD10Children_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManageFavourites">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/ManageFavourites" message="tns:ISnApiService_ManageFavourites_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/ManageFavouritesResponse" message="tns:ISnApiService_ManageFavourites_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetConfigValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/SetConfigValue" message="tns:ISnApiService_SetConfigValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/SetConfigValueResponse" message="tns:ISnApiService_SetConfigValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSnoflakeURL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISnApiService/GetSnoflakeURL" message="tns:ISnApiService_GetSnoflakeURL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISnApiService/GetSnoflakeURLResponse" message="tns:ISnApiService_GetSnoflakeURL_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISnApiService" type="tns:ISnApiService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateFavourite">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/CreateFavourite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFavouritePrivateSharedFlag">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/SetFavouritePrivateSharedFlag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavourite">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/DeleteFavourite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameFavourite">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/RenameFavourite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnregisterUser">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/UnregisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNeighbourCount">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetNeighbourCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRelTypes">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetRelTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCrossMapSet">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetCrossMapSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStatus">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuffixes">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetSuffixes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavourites">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetFavourites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubSets">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetSubSets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchConcepts">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/SearchConcepts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchICD10Codes">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/SearchICD10Codes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchConceptsCount">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/SearchConceptsCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConcept">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetConcept" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDescription">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetICD10Description">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetICD10Description" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNeighbours">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetNeighbours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetICD10Children">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetICD10Children" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManageFavourites">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/ManageFavourites" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetConfigValue">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/SetConfigValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSnoflakeURL">
+      <soap:operation soapAction="http://tempuri.org/ISnApiService/GetSnoflakeURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SnApiService">
+    <wsdl:port name="BasicHttpBinding_ISnApiService" binding="tns:BasicHttpBinding_ISnApiService">
+      <soap:address location="http://snapi.dataline.co.uk/SnApiService.svc/SnApiService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
